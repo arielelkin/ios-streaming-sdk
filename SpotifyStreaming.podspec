@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.exclude_files = "docs/**/*", "Demo Projects/**/*"
   s.framework = 'AVFoundation'
   s.source_files = 'Spotify.swift'
-  swift_versions = 5
+  s.swift_version = '5.0'
 end
