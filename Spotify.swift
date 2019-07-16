@@ -17,13 +17,12 @@ class Spotify: NSObject {
         }
 
         let player = SPTAudioStreamingController.sharedInstance()
-        player.delegate = instance
 
         return instance
     }()
 
     private static var persistedSession: SPTSession? {
-        if let persistedSessionData = UserDefaults.standard.value(forKey: sessionUserDefaultsKey) as? Data,
+        if let persistedSessionData = UserDefaults.standard.value(forKey: "key") as? Data,
             let persistedSession = try? NSKeyedUnarchiver.unarchivedObject(
                 ofClass: SPTSession.self,
                 from: persistedSessionData) {
